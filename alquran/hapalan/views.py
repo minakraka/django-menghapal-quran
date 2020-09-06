@@ -6,7 +6,7 @@ import json
 
 def home(request):
     # return HttpResponse("Sisil")
-    data = open(settings.MEDIA_URL + 'data.json')
-    data = json.load(data)
+    data = open(settings.MEDIA_URL + 'data.json') # warna orange nama dari json yang dipanggil
+    data = json.load(data) # data sbg  fungsinya digunakan u memanggil fungsi murottal
     
     return render(request, 'index.html', data)
