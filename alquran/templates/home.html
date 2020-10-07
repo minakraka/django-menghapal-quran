@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+    <form method="post" action="{% url 'player' %}">
+        {% csrf_token %}
+        <div>
+            <label for="syekh">Choose a Syekh:</label>
+            <select name="syekh" id="syekh">
+                {% for syekh in syekh %}
+                <option value="{{ syekh.id }}">{{ syekh.nama }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div>
+            <label for="surah">Choose a Surah:</label>
+            <select name="surah" id="surah">
+                {% for surah in surah %}
+                <option value="{{ surah.no_surat }}">{{ surah.nama_surat }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div>
+            <label for="AyatPertama">Dari Ayat ke:</label>
+            <input type="text" id="AyatPertama" name="AyatPertama">
+        </div>
+        <div>
+            <label for="AyatTerakhir">Sampai Ayat ke:</label>
+            <input type="text" id="AyatTerakhir" name="AyatTerakhir">
+        </div>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
