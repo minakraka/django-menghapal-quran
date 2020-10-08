@@ -14,7 +14,7 @@ class Ayat(models.Model):
     def __str__(self):
         return "Surat %s - Ayat %s" % (self.surat, self.no_ayat)
 
-class Qory(models.Model):
+class Syekh(models.Model):
     nama = models.CharField(max_length=100)
     profile = models.CharField(max_length=100)
 
@@ -22,7 +22,7 @@ class Qory(models.Model):
         return self.nama
 
 class Murottal(models.Model):
-    qory = models.ForeignKey(Qory, on_delete=models.CASCADE)
+    syekh = models.ForeignKey(Syekh, on_delete=models.CASCADE)
     surat = models.ForeignKey(Surat, on_delete=models.CASCADE)
     ayat = models.ForeignKey(Ayat, on_delete=models.CASCADE)
     sound = models.CharField(max_length=100)

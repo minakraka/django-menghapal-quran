@@ -271,43 +271,7 @@ Player.prototype = {
 };
 
 // Setup our new audio player class and pass it the playlist.
-var player = new Player([
-  {
-    title: 'Ayat 1',
-    file: 'http://0.0.0.0:8000/media/quran/1/1/001001.mp3',
-    howl: null
-  },
-  {
-    title: 'Ayat 2',
-    file: 'http://0.0.0.0:8000/media/quran/1/1/001002.mp3',
-    howl: null
-  },
-  {
-    title: 'Ayat 3',
-    file: 'http://0.0.0.0:8000/media/quran/1/1/001003.mp3',
-    howl: null
-  },
-  {
-    title: 'Ayat 4',
-    file: 'http://0.0.0.0:8000/media/quran/1/1/001004.mp3',
-    howl: null
-  },
-  {
-    title: 'Ayat 5',
-    file: 'http://0.0.0.0:8000/media/quran/1/1/001005.mp3',
-    howl: null
-  },
-  {
-    title: 'Ayat 6',
-    file: 'http://0.0.0.0:8000/media/quran/1/1/001006.mp3',
-    howl: null
-  },
-  {
-    title: 'Ayat 7',
-    file: 'http://0.0.0.0:8000/media/quran/1/1/001007.mp3',
-    howl: null
-  }
-]);
+var player = new Player();
 
 // Bind our player controls.
 playBtn.addEventListener('click', function() {
